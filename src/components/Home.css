@@ -1,0 +1,380 @@
+/********************************************** Nav Bar Starts **********************************************/
+
+.nav-container {
+  width: 100vw;
+  height: 16vh;
+  background-image: url(../home-images/nav.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  caret-color: transparent;
+}
+
+/********************************************** Main Nav **********************************************/
+
+.nav-main {
+  height: 11vh;
+  background: linear-gradient(
+    90deg,
+    rgba(32, 44, 55, 0.94) 0%,
+    rgba(22, 30, 45, 0.98) 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+.nav-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-left: 15px;
+  width: 95vw;
+}
+
+.nav-icon-div {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-icons {
+  height: 22px;
+  width: 22px;
+  margin-right: 23px;
+  background-size: cover;
+}
+
+#youtube {
+  background-image: url(../home-images/youtube-icon.png);
+}
+#steam {
+  background-image: url(../home-images/steam-icon.svg);
+}
+#twitch {
+  background-image: url(../home-images/twitch-icon.png);
+}
+#discord {
+  background-image: url(../home-images/discord-icon.png);
+}
+
+.nav-logo-div {
+  background-image: url(../home-images/logo.png);
+  background-size: cover;
+  height: 9vh;
+  width: 11vw;
+  margin-left: 60px;
+  user-select: none;
+}
+
+.nav-account-div {
+  display: flex;
+
+  height: 40px;
+}
+
+.or {
+  font-weight: 600;
+  font-size: 14px;
+  color: #cfcfcf;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  background-color: rgb(29, 36, 46);
+  color: #fff;
+  height: 40px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.reg-btn {
+  padding-right: 15px;
+}
+
+.reg-icon-cont {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.reg-icon {
+  height: 22px;
+  width: 22px;
+  background-image: url(../home-images/reg-icon.svg);
+  background-size: cover;
+}
+
+.sign-icon-cont {
+  background-color: #ff8800;
+
+  height: 100%;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-icon {
+  height: 22px;
+  width: 22px;
+  background-image: url(../home-images/sign-icon.svg);
+  background-size: cover;
+}
+
+.sign-label {
+  height: 40px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff8800;
+}
+
+#signin-btn:hover .sign-label {
+  color: #fff;
+}
+
+/********************************************** Main Nav **********************************************/
+
+/********************************************** Sub Nav **********************************************/
+
+.nav-sub {
+  height: 5vh;
+  background-color: rgba(25, 34, 44, 0.98);
+  display: flex;
+  justify-content: center;
+}
+
+.link-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45vw;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-div {
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.link-div:hover {
+  color: #ff8800;
+}
+
+/********************************************** Sub Nav **********************************************/
+
+/********************************************** Nav Bar Ends **********************************************/
+
+/********************************************** Video Container Starts **********************************************/
+.vid-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  caret-color: transparent;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background: linear-gradient(0deg, #191d26eb 0%, #36385096 100%);
+  opacity: 0.92;
+}
+
+.vid-content {
+  position: absolute;
+  top: 27%;
+  left: 15%;
+  width: 55vw;
+}
+
+.vid-heading {
+  color: #fff;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+#gaming-span {
+  color: #ff9c00;
+}
+
+.vid-para {
+  color: #eeeeee;
+  width: 45vw;
+  font-size: 21px;
+  line-height: 35px;
+  font-weight: 500;
+  margin-left: 7px;
+  margin-bottom: 40px;
+}
+
+.vid-btn {
+  padding: 25px 35px;
+  border: none;
+  background-color: #ff9c00;
+  color: #f7f7f7;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.vid-btn-icon {
+  height: 20px;
+  width: 30px;
+  background-image: url(../home-images/vid-btn-icon.svg);
+  background-size: cover;
+  margin-right: 20px;
+}
+
+.vid-btn::before {
+  content: "";
+  position: absolute;
+  height: 130px;
+  width: 40px;
+  background: #f3f3f3;
+  box-shadow: 0 0 10px #fff;
+  filter: blur(1px);
+  opacity: 0.8;
+  top: 1px;
+  transition: 0.4s;
+  transform: rotate(30deg) translateX(-110px);
+}
+
+.vid-btn:hover {
+  background-color: #f74f1c;
+  transform: rotate(4deg) scale(1.1);
+}
+
+.vid-btn:hover::before {
+  transform: rotate(30deg) translate(235px, -160px);
+}
+
+/********************************************** Video Container Ends **********************************************/
+
+/********************************************** Service Container Starts **********************************************/
+
+.service-section {
+  width: 100vw;
+  height: fit-content;
+
+  caret-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16vh 0;
+}
+
+.service-container {
+  width: 80vw;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+.service-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.service-div:hover .serv-img-cont {
+  transform: translateY(-8px);
+  transition: 0.4s;
+}
+
+.service-div:hover {
+  background-color: #11161b;
+  box-shadow: 0 4px 10px #101010;
+}
+
+.service-heading {
+  font-size: 20px;
+  font-weight: 800;
+  width: 85%;
+  color: #fff;
+
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.service-para {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #9c9c9c;
+  margin-bottom: 15px;
+}
+
+.service-img {
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+}
+
+.serv-img-cont {
+  border: 4px solid #fcb900;
+  margin-top: 13px;
+  margin-bottom: 35px;
+  padding: 17px;
+}
+
+#serv-icon1 {
+  background-image: url(../home-images/serv-icon1.svg);
+}
+
+#serv-icon2 {
+  background-image: url(../home-images/serv-icon2.svg);
+}
+
+#serv-icon3 {
+  background-image: url(../home-images/serv-icon3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#serv-icon4 {
+  background-image: url(../home-images/serv-icon4.svg);
+}
+
+/********************************************** Service Container Ends **********************************************/
