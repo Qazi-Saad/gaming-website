@@ -1,8 +1,41 @@
-import React from "react";
+import 'intersection-observer';
+import React, { useEffect, useRef } from 'react';
 import "./Home.css";
 import HomeVid from "./HomeVid";
 
 const Home = () => {
+
+  const serviceContRef = useRef(null);
+  const serviceBoxRef = useRef([]);
+  const tournamentRef = useRef(null);
+
+  
+  useEffect(() => {
+    const serviceContElement = serviceContRef.current;
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Adjust this value to change when the boxes start falling
+    };
+    
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          serviceBoxRef.current.forEach((box, index) => {
+            box.style.animation = `fall 1.1s ease forwards`;
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    observer.observe(serviceContElement);
+
+    return () => {
+      observer.unobserve(serviceContElement);
+    };
+  }, []);
+
   return (
     <div>
       {/********************************* Nav Bar Start *******************************/}
@@ -72,9 +105,9 @@ const Home = () => {
 
       {/********************************* Service Section Starts *******************************/}
 
-      <div className="service-section">
+      <div className="service-section" ref={serviceContRef}>
         <div className="service-container">
-          <div className="service-div">
+          <div className="service-div" ref={(el) => (serviceBoxRef.current[0] = el)}>
             <div className="serv-img-cont">
               <div className="service-img" id="serv-icon1"></div>
             </div>
@@ -84,7 +117,7 @@ const Home = () => {
               theme <br /> that gives you unlimited <br /> possibilities!
             </p>
           </div>
-          <div className="service-div">
+          <div className="service-div" ref={(el) => (serviceBoxRef.current[1] = el)}>
             <div className="serv-img-cont">
               <div className="service-img" id="serv-icon2"></div>
             </div>
@@ -95,7 +128,7 @@ const Home = () => {
               tournaments.
             </p>
           </div>
-          <div className="service-div">
+          <div className="service-div" ref={(el) => (serviceBoxRef.current[2] = el)}>
             <div className="serv-img-cont">
               <div className="service-img" id="serv-icon3"></div>
             </div>
@@ -106,7 +139,7 @@ const Home = () => {
               and blogs.
             </p>
           </div>
-          <div className="service-div">
+          <div className="service-div" ref={(el) => (serviceBoxRef.current[3] = el)}>
             <div className="serv-img-cont">
               <div className="service-img" id="serv-icon4"></div>
             </div>
@@ -121,6 +154,18 @@ const Home = () => {
       </div>
 
       {/********************************* Service Section Ends *******************************/}
+
+      {/********************************* Tournament Section Starts *******************************/}
+
+        <div className="tournament-section">
+          <div className="tournament-img"></div>
+          <button className="tournament-btn">
+            <div className="tour-btn-icon"></div>
+            <span className='tour-btn-text'>CREATE, MANAGE AND JOIN TOURNAMENTS!</span>
+          </button>
+        </div>
+
+      {/********************************* Tournament Section Ends *******************************/}
     </div>
   );
 };
